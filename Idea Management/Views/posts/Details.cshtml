@@ -1,0 +1,51 @@
+﻿@model Idea_Management.Models.post
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.post_text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.post_text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.post_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.post_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.post_like)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.post_like)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.post_dislike)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.post_dislike)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.post_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

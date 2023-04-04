@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var Ideas in Model)
+{
+    <div class="row">
+        <div class="post col-md-6">
+            <h2 class="title">
+                @Ideas.Title
+            </h2>
+            <div class="Description">Description: @Ideas.Description</div>
+            <div class="Deadline1" name="deadline1">Deadline1: @Ideas.Deadline1</div>
+            <div class="Deadline2" name="deadline2">Deadline2: @Ideas.Deadline2</div>
+            <div class="body">
+                <button class="btn btn-success like-article">
+                    <i class="fas fa-thumbs-up"></i>
+                </button>
+                <button class="btn btn-danger dislike-article">
+                    <i class="fas fa-thumbs-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+}
